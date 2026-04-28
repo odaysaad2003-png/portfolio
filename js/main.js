@@ -89,12 +89,12 @@ const servicesData = {
   design: {
     title: "UI/UX Design",
     desc: "I design clean and user-friendly interfaces that improve user experience.",
-    img: "imges/Business 2 WordPress Theme – Xtra WordPress Theme_files/land.jpg"
+    img: "imges/photo coding/land.jpg"
   },
   responsive: {
     title: "Responsive Design",
     desc: "Your website will look perfect on all devices: mobile, tablet, and desktop.",
-    img: "imges/gallery-01.png"
+    img: "imges/broject-midgernephoto/gallery-01.png"
   }
 };
 
