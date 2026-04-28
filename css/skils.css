@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+  --main-bg: #040b1c;
+  --card-bg: #0f172a;
+  --primary: #0d6efd;
+  --primary-light: #3b82f6;
+  --text: #e5e7eb;
+  --text-light: #9ca3af;
+  --border: #1f2937;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body{
+  
+  background-color: #040010;
+}
+a{
+  
+  text-decoration: none;
+}
+ul{
+list-style: none;
+}
+
+.containers.scrolled {
+  background-color: rgba(0, 0, 0, 0.7); /* أسود بشفافية */
+}
+
+img{
+  max-width: 100%;
+}
+
+
+ /* start skillssss */
+@media(max-width:769px){
+
+.skils .container img{
+  display: none;
+}
+.skils .container .rang{
+         flex-basis: 85% !important;
+         width: 100%;
+}
+
+.skils .container{
+  flex-direction: column;
+  gap: 20px;
+}
+}
+
+.skils{
+    padding-bottom: 150px;
+    padding-top: 100px;
+}
+.skils .container{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.skils .container .rang{
+  flex-basis: 38%;
+}
+.skils .container .rang .cont{
+ margin-bottom: 20px;
+}
+.skils .container .rang h2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cont-rang span.fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4fa3ff, #00d4ff);
+  transition: width 1.6s ease;
+}
+.cont.active span.fill {
+  width: var(--width);
+}
+.skils .container .rang h2 span{
+ border: 1px solid #000a98;
+  padding: 1px 6px;
+  font-size: 10px;
+  border-radius: 6px;
+  color:  #1787e0;
+}
+
+.skils .container .rang .cont-rang{
+  width: 100%;
+  height: 30px;
+  background-color: #c5bdbd;
+  position: relative;
+}
+/* .skils .container .rang .cont-rang span{
+  position: absolute;
+  background-color: #1787e0;
+} */
+img.w-f {
+    max-width: 100%;
+    width: 340px;
+    height: 400px;
+    border-radius: 15px;
+    position: relative;
+    left: 10%;
+    top: 15px;
+    /* transform: translate(125px, 16px); */
+    transition: 0.5s;
+}
+
+img.m-f {
+    max-width: 100%;
+    width: 340px;
+    height: 400px;
+    border-radius: 15px;
+    position: relative;
+    left: 10%;
+    top: 15px;
+    /* transform: translate(125px, 16px); */
+    transition: 0.5s;
+}
+
+img.m-f:hover,img.w-f:hover{
+  transform: scale(1.12) translate(25px,-25px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*fill mood */
+
+
+
+
+
+
+
+
+
+
+
+/* end skillssss */
+
+
+
+
+.share-box2{
+
+
+  position: relative;
+  margin: 50px 100px;
+}
+
+
+.share-box2 button ,
+.share-box2 a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111827;
+  border-radius: 50%;
+  color: blue;
+  transition: 0.3s;
+}
+.share-box2 a {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.share-box2 a.faceboock{
+
+}
+a.linkedin {
+    top: 50px;
+    left: 37px;
+    transition: 0.4s;
+}
+
+.inf-link{
+text-align: center;
+text-transform: capitalize;
+}
+
+a.facebook {
+       top: -39px;
+    left: 45px;
+    transition: 0.4s;
+
+}
+a.twitter {
+    top: 42px;
+    left: -39px;
+    transition: 0.4s;
+}
+a.youtube {
+    top: -46px;
+    left: -37px;
+    transition: 0.4s;
+}
+
+.share-box2.activ a.twitter{
+  animation: show 0.5s  0.13s forwards;
+}
+.share-box2.activ a.facebook{
+ animation: show 0.5s  0.6s forwards;
+}
+.share-box2.activ a.linkedin{
+ animation: show 0.5s  0.9s forwards;
+}
+.share-box2.activ a.youtube{
+ animation: show 0.5s  0.3s forwards;
+}
+
+a.faceboock:hover{
+  color : rgb(0, 191, 255);
+}
+a.linkedin:hover{
+  color : rgb(0, 191, 255);
+}
+a.youtube:hover{
+  color : rgb(0, 191, 255);
+}
+a.twitter:hover{
+  color : rgb(0, 191, 255);
+}
+/* .share-box2.activ a{
+  opacity: 1;
+  visibility: visible;
+} */
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }to{
+      opacity: 1;
+    visibility: visible;
+  }
+}
+/* sahr boxxx */
