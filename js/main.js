@@ -13,6 +13,28 @@ AOS.init();
   });
 });
 
+
+//burger
+
+
+const burger = document.getElementById("burger");
+const nav = document.querySelector(".nav-header-bg");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+    burger.classList.toggle("active");
+});
+
+
+// burger.addEventListener("click", () => {
+
+// });
+//burger
+
+
+
+
+
 // scroll style
 // JavaScript فقط للـProgress Bar
 const progressContainer = document.querySelector('.progress-container');
