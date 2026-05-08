@@ -98,6 +98,11 @@ window.addEventListener("scroll", () => {
     }
     });
 
+
+ 
+
+
+
 //modaaaal
 
 
