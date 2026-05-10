@@ -14,6 +14,9 @@ AOS.init();
 });
 
 
+
+
+
 //burger
 
 
@@ -351,23 +354,29 @@ const text = ` I'm a Front-End Developer passionate about building modern,
 
 const target = document.getElementById("about-text");
 
-let i = 0;
+if (target) {
+  const text = `...`;
 
-function typeWriter() {
-  if (i < text.length) {
-    target.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 30); // سرعة الكتابة
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      target.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 30);
+    }
   }
-}
 
-window.addEventListener("DOMContentLoaded", typeWriter);
+  window.addEventListener("DOMContentLoaded", typeWriter);
+}
 
 
 
 / طريقة الكتابة ديناميكية/
 
 // carosiellll
+
+if (typeof Swiper !== "undefined") {
 
 
 
@@ -393,19 +402,20 @@ spaceBetween: 15,
   nav: false,
 dots: false,     
 });
+}
+
+
 // carosiellll
 
 
 
+const shareBtn = document.getElementById("share");
 
-const shar2 = document.getElementById("share2")
-
-
-
-shar2.addEventListener("click",()=>{
-  document.querySelector(".share-box2").classList.toggle("activ")
-})
-
+if (shareBtn) {
+  shareBtn.addEventListener("click", () => {
+    document.querySelector(".share-box").classList.toggle("activ");
+  });
+}
 
 
 

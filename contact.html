@@ -122,10 +122,14 @@
     </div>
 
     <!-- Form -->
-    <form id="contactForm" class="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
+    <form  id="contactForm" action="contact.php" class="contact-form"  method="POST">
+
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
 
       <button type="submit">Send Message</button>
     </form>
@@ -246,8 +250,9 @@
    <!-- owl-carousel -->
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/datatables.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script src="js/contact.js"></script>
-<script src="js/serv.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

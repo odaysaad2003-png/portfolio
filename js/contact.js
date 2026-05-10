@@ -1,26 +1,51 @@
-const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", (e) => {
+const fff = document.getElementById("contactForm");
+
+
+
+fff.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  let name = document.getElementById("name").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let message = document.getElementById("message").value.trim();
+  const formData = new FormData(fff);
 
-  if (name === "" || email === "" || message === "") {
-    alert("Please fill all fields!");
-    return;
+  const response = await fetch("contact.php", {
+    method: "POST",
+    body: formData
+  });
+
+  const data = await response.json();
+console.log(data);
+  if (data.status === "success") {
+    showMessage(data.message, "success");
+    fff.reset();
+  } else {
+    showMessage(data.message, "error");
   }
-
-  if (!email.includes("@")) {
-    alert("Enter valid email!");
-    return;
-  }
-
-  alert("Message sent successfully 🚀");
-
-  form.reset();
 });
+
+function showMessage(msg, type) {
+  let box = document.getElementById("msgBox");
+
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "msgBox";
+    box.style.marginTop = "15px";
+    box.style.padding = "10px";
+    box.style.borderRadius = "8px";
+    fff.appendChild(box);
+  }
+
+  box.textContent = msg;
+
+  if (type === "success") {
+    box.style.background = "#10b981";
+    box.style.color = "white";
+  } else {
+    box.style.background = "#ef4444";
+    box.style.color = "white";
+  }
+}
+
 
 
 
